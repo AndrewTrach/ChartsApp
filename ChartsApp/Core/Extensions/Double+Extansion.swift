@@ -22,9 +22,6 @@ extension Double {
     // Format only the decimal part of the number
     func formattedAsDecimal() -> String {
         let decimalPart = abs(self.truncatingRemainder(dividingBy: 1))
-        if decimalPart == 0 {
-            return ""
-        }
         let decimal = String(format: ".%02d", Int(decimalPart * 100))
         return decimal
     }

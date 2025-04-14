@@ -11,11 +11,11 @@ import SwiftUI
 struct AccountsListView: View {
     
     // MARK: - Properties
-    var accounts: [Transaction]
-    var selectedPoint: Int?
-    var dataPoints: [ChartDataPoint]
-    var selectedPeriod: ChartPeriod
-    var onSelectTransaction: (Transaction) -> Void
+    let accounts: [Transaction]
+    let selectedPoint: Int?
+    let dataPoints: [ChartDataPoint]
+    let selectedPeriod: ChartPeriod
+    let onSelectTransaction: (Transaction) -> Void
     @Binding var isExpanded: Bool
     
     // MARK: - Computed properties

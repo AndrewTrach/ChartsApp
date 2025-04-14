@@ -76,7 +76,7 @@ enum AppConstants {
 
         enum Statistics {
             static let minAccountsHeightMultiplier: CGFloat = 0.45
-            static let maxAccountsHeightMultiplier: CGFloat = 0.95
+            static let maxAccountsHeightMultiplier: CGFloat = 0.97
         }
     }
     
