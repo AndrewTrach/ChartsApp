@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		59095C452DAAD283009F6634 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59095C3F2DAAD283009F6634 /* Preview Assets.xcassets */; };
 		59095C462DAAD283009F6634 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59095C412DAAD283009F6634 /* Assets.xcassets */; };
-		59095C472DAAD283009F6634 /* ChartsAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59095C422DAAD283009F6634 /* ChartsAppApp.swift */; };
+		59095C472DAAD283009F6634 /* ChartsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59095C422DAAD283009F6634 /* ChartsApp.swift */; };
 		59095C4A2DAAD435009F6634 /* CSVTransactionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59095C492DAAD435009F6634 /* CSVTransactionManager.swift */; };
 		59095C4D2DAB187A009F6634 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 59095C4C2DAB187A009F6634 /* ComposableArchitecture */; };
 		59095C4F2DAB26E3009F6634 /* data.csv in Resources */ = {isa = PBXBuildFile; fileRef = 59095C4E2DAB26E3009F6634 /* data.csv */; };
@@ -39,7 +39,7 @@
 		59095C2E2DAAD27B009F6634 /* ChartsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChartsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59095C3F2DAAD283009F6634 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		59095C412DAAD283009F6634 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		59095C422DAAD283009F6634 /* ChartsAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsAppApp.swift; sourceTree = "<group>"; };
+		59095C422DAAD283009F6634 /* ChartsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsApp.swift; sourceTree = "<group>"; };
 		59095C492DAAD435009F6634 /* CSVTransactionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVTransactionManager.swift; sourceTree = "<group>"; };
 		59095C4E2DAB26E3009F6634 /* data.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = data.csv; sourceTree = "<group>"; };
 		59095C512DABC975009F6634 /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 		59095C502DABC949009F6634 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				59095C422DAAD283009F6634 /* ChartsAppApp.swift */,
+				59095C422DAAD283009F6634 /* ChartsApp.swift */,
 				59095C512DABC975009F6634 /* AppDependencies.swift */,
 				59095C7A2DAD1956009F6634 /* AppConstants.swift */,
 			);
@@ -322,7 +322,7 @@
 				59095C6E2DAC2783009F6634 /* LineChartView.swift in Sources */,
 				59095C7B2DAD1956009F6634 /* AppConstants.swift in Sources */,
 				59095C522DABC975009F6634 /* AppDependencies.swift in Sources */,
-				59095C472DAAD283009F6634 /* ChartsAppApp.swift in Sources */,
+				59095C472DAAD283009F6634 /* ChartsApp.swift in Sources */,
 				59095C8C2DAD4CDB009F6634 /* ViewModifiers.swift in Sources */,
 				59095C642DABD4F7009F6634 /* ChartFeature.swift in Sources */,
 				59095C802DAD4B62009F6634 /* Date+Extension.swift in Sources */,

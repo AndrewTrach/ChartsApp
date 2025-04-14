@@ -252,28 +252,33 @@ struct LineChartView: View {
         // Handle double tap only for yearly chart
         guard selectedPeriod == .year, let plotFrame = proxy.plotFrame else { return }
         
-        // If already zoomed to maximum, return to normal size
+        // Calculate relative touch position in the chart's plot area
+        let xPosition = location.x - geometry[plotFrame].origin.x
+        
+        // Check if touch is within chart bounds
+        guard xPosition >= 0 && xPosition <= geometry[plotFrame].width else { return }
+        
+        let relativePosition = xPosition / geometry[plotFrame].width
+        
+        // If already zoomed in, return to normal size
         if chartScale >= quickZoomScale * 0.9 {
             chartScale = minScale
             chartOffset = 0 // Reset offset
             return
         }
         
-        // Calculate relative touch position
-        let xPosition = location.x - geometry[plotFrame].origin.x
-        let relativePosition = xPosition / geometry[plotFrame].width
-        
+        // Set the zoom level
         chartScale = quickZoomScale
         
-        // Determine zoom center based on touch point
-        if relativePosition < 0.25 {
-            chartOffset = 0 // Start of chart
-        } else if relativePosition > 0.75 {
-            chartOffset = 1.0 // End of chart
-        } else {
-            // Center at touch point
-            chartOffset = relativePosition - 0.25
-        }
+        // This is the width of the visible window as a fraction of the total content
+        let visibleFraction = 1.0 / chartScale
+        
+        // Position the left edge of the visible window so that the tap point is centered
+        let newOffset = relativePosition - (visibleFraction / 2.0)
+        
+        // Clamp the offset to valid range (0 to max valid offset)
+        let maxOffset = 1.0 - visibleFraction
+        chartOffset = min(max(0, newOffset), maxOffset)
     }
     
     /// Handle tap gesture for point selection

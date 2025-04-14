@@ -149,6 +149,3 @@ struct ChartView: View {
         .disabled(isDisabled)
     }
 }
-
-
-
